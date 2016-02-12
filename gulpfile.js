@@ -11,7 +11,7 @@ var babel           = require('gulp-babel');
 
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'html');
+    gulp.start('scripts', 'styles',  'html');
 });
 
 
@@ -33,12 +33,12 @@ gulp.task('scripts', function() {
     return gulp.src('./src/scripts/**/*.js')
         .pipe(jshint({esversion: 6}))
         .pipe(jshint.reporter('default'))
-        .pipe(concat('main.js'))
+        .pipe(concat('index.js', {newLine: ';'}))
         .pipe(babel())
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./dist/js/'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('html', function() {
