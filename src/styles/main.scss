@@ -1,0 +1,14 @@
+@import 'partials/reset';
+
+/* *********************
+ * Site Wide Constants
+ * *********************/
+
+/* Font */
+$primary-font-stack:    "Helvetica Neue", Helvetica, sans-serif;
+$primary-color:         #3f3;
+
+body {
+    font: 100% $primary-font-stack;
+    color: $primary-color;
+}
