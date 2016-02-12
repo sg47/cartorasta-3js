@@ -1,0 +1,25 @@
+{
+  "name": "cartorasta",
+  "version": "1.0.0",
+  "description": "Map Creation, Conversion, and 3D Planet Display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joneubank/cartorasta-3js.git"
+  },
+  "keywords": [
+    "planet",
+    "map",
+    "three.js",
+    "sandbox"
+  ],
+  "author": "Jon Eubank",
+  "license": "Gnu Public License",
+  "bugs": {
+    "url": "https://github.com/joneubank/cartorasta-3js/issues"
+  },
+  "homepage": "https://github.com/joneubank/cartorasta-3js#readme"
+}
