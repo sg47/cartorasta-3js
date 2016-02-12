@@ -10,8 +10,13 @@ var concat          = require('gulp-concat');
 var babel           = require('gulp-babel');
 
 
+gulp.task('default', ['clean'], function() {
+    gulp.start('styles', 'scripts', 'html');
+});
+
+
 gulp.task('clean', function() {
-    return del(['dist/css', 'dist/js']);
+    return del(['dist/css', 'dist/js', 'dist/**/*.html']);
 });
 
 gulp.task('styles', function() {
@@ -43,5 +48,7 @@ gulp.task('html', function() {
 
 
 gulp.task('watch', function(){
-    gulp.watch('./src/styles/*.scss', ['styles']);
+    gulp.watch('./src/styles/**/*.scss',    ['styles']);
+    gulp.watch('./src/scripts/**/*.js',     ['scripts']);
+    gulp.watch('./src/html/**/*.html',      ['html']);
 });
